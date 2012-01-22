@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with python2
+
+override_dh_install:
+	# clean unneeded stuff
+	[ -d debian/python-graphite/usr/conf ] && rm -r debian/python-graphite/usr/conf
+	[ -d debian/python-graphite/usr/storage ] && rm -r debian/python-graphite/usr/storage
+	[ -d debian/python-graphite/usr/bin ] && rm -r debian/python-graphite/usr/bin
+	[ -d debian/python-graphite/usr/share/python-graphite ] || mkdir -p debian/python-graphite/usr/share/python-graphite
+	find debian/python-graphite/usr/webapp -type f -exec chmod 644 {} \;
+	mv debian/python-graphite/usr/webapp/content debian/python-graphite/usr/share/python-graphite/static
+	[ -d debian/python-graphite/usr/webapp ] && rm -rf debian/python-graphite/usr/webapp
+	find debian/python-graphite -type f -name local_settings.py -exec rm {} \;
+	dh_install
+
+

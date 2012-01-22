@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = configure ]; then
+	if ! getent passwd graphite > /dev/null; then
+		adduser --system --quiet --home /var/lib/graphite --no-create-home \
+			--shell /bin/false --group --gecos "Graphite User" graphite
+	fi
+
+	if [ "`id -u graphite`" -eq 0 ]; then
+		echo "The graphite system user must not have uid 0 (root). Please fix this and reinstall this package." >&2
+		exit 1
+	fi
+
+	 if [ "`id -g graphite`" -eq 0 ]; then
+		echo "The graphite system user must not have root as primary group. Please fix this and reinstall this package." >&2
+		exit 1
+	fi
+fi
+
+#DEBHELPER#

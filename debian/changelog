@@ -1,0 +1,5 @@
+python-graphite (0.9.9-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnnn)
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Tue, 17 Jan 2012 20:35:27 +0100

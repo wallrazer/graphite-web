@@ -1,2 +1,0 @@
-debian/graphite.wsgi usr/share/python-graphite
-debian/apache2-graphite.conf usr/share/python-graphite

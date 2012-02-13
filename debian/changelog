@@ -1,4 +1,4 @@
-python-graphite (0.9.9-1) unstable; urgency=low
+graphite-web (0.9.9-1) unstable; urgency=low
 
   * Initial release (Closes: #nnnnn)
 

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = configure ]; then
+	if ! getent passwd _graphite > /dev/null; then
+		adduser --system --quiet --home /var/lib/graphite --no-create-home \
+			--shell /bin/false --force-badname --group --gecos "Graphite User" _graphite
+	fi
+fi
+
+#DEBHELPER#

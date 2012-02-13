@@ -5,14 +5,14 @@
 
 override_dh_install:
 	# clean unneeded stuff
-	[ -d debian/python-graphite/usr/conf ] && rm -r debian/python-graphite/usr/conf
-	[ -d debian/python-graphite/usr/storage ] && rm -r debian/python-graphite/usr/storage
-	[ -d debian/python-graphite/usr/bin ] && rm -r debian/python-graphite/usr/bin
-	[ -d debian/python-graphite/usr/share/python-graphite ] || mkdir -p debian/python-graphite/usr/share/python-graphite
-	find debian/python-graphite/usr/webapp -type f -exec chmod 644 {} \;
-	mv debian/python-graphite/usr/webapp/content debian/python-graphite/usr/share/python-graphite/static
-	[ -d debian/python-graphite/usr/webapp ] && rm -rf debian/python-graphite/usr/webapp
-	find debian/python-graphite -type f -name local_settings.py -exec rm {} \;
+	[ -d debian/graphite-web/usr/conf ] && rm -r debian/graphite-web/usr/conf
+	[ -d debian/graphite-web/usr/storage ] && rm -r debian/graphite-web/usr/storage
+	[ -d debian/graphite-web/usr/bin ] && rm -r debian/graphite-web/usr/bin
+	[ -d debian/graphite-web/usr/share/graphite-web ] || mkdir -p debian/graphite-web/usr/share/graphite-web
+	find debian/graphite-web/usr/webapp -type f -exec chmod 644 {} \;
+	mv debian/graphite-web/usr/webapp/content debian/graphite-web/usr/share/graphite-web/static
+	[ -d debian/graphite-web/usr/webapp ] && rm -rf debian/graphite-web/usr/webapp
+	find debian/graphite-web -type f -name local_settings.py -exec rm {} \;
 	dh_install
 
 

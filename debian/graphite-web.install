@@ -1,0 +1,2 @@
+debian/graphite.wsgi usr/share/graphite-web
+debian/apache2-graphite.conf usr/share/graphite-web

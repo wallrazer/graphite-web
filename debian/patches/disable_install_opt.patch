@@ -1,6 +1,6 @@
 Description: Do not install stuff to /opt
 Author: Jonas Genannt <jonas.genannt@capi2name.de>
-Upstream: no
+Forwarded: not-needed
 
 diff --git a/setup.cfg b/setup.cfg
 index aeccfb2..e69de29 100644

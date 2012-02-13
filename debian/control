@@ -11,7 +11,7 @@ Package: graphite-web
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends},
  adduser,
- python-carbon,
+ graphite-carbon,
  python-cairo,
  python-django,
  python-simplejson,

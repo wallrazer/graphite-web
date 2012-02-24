@@ -1,6 +1,6 @@
 Source: graphite-web
-Section: python
-Priority: optional
+Section: web
+Priority: extra
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Jonas Genannt <jonas.genannt@capi2name.de>
 Build-Depends: debhelper (>= 8), python-all (>= 2.6.6-3~)
